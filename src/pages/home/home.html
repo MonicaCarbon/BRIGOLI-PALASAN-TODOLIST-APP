@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+     	To Do List
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+   <button ion-button block (click)="onLoadNewPlace()">Add New Task</button>
+
+
+   		<!--<li *ngFor="let task of tasks"> {{ task.title }} 
+
+   		</li>-->
+   	<ion-list>
+	   	<ion-item *ngFor="let task of tasks"> {{ task.title }}
+	   	<button ion-button item-right color="secondary">Edit</button>
+	   	<button ion-button item-right color="danger" (click)="removeTask(task)">Delete</button>
+	   	</ion-item>
+	</ion-list>
+</ion-content>

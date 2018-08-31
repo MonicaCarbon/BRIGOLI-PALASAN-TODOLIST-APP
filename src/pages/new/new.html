@@ -1,0 +1,23 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Task</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form (ngSubmit)="onAddTask(f.value)" #f="ngForm">
+  	<ion-item>
+  		<ion-label> Task </ion-label> <br>
+  		<ion-input type="text" name="title" ngModel required> </ion-input>
+  	</ion-item>
+  	<!-- <ion-item>
+  		<ion-label> Description: </ion-label>
+  		<ion-input type="text" name="description" ngModel> </ion-input>
+  	</ion-item> -->
+  	<button ion-button block type="submit" [disabled]="!f.valid"> Save </button>
+  </form>
+</ion-content>
